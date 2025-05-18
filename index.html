@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GenAi – AI Voice Agent</title>
+  <title>GenAi – Der AI Voice Agent der Zukunft</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
@@ -15,11 +15,12 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom right, #f9fbfd, #eef2f5);
       color: #1a1a1a;
+      overflow-x: hidden;
     }
     header {
-      background: linear-gradient(90deg, #0a84ff, #00c6ff);
+      background: linear-gradient(135deg, #0a84ff, #00c6ff);
       color: white;
-      padding: 6rem 2rem 4rem;
+      padding: 8rem 2rem 5rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -27,107 +28,115 @@
     header::after {
       content: "";
       position: absolute;
-      bottom: -80px;
+      bottom: -120px;
       left: 0;
       width: 100%;
-      height: 160px;
+      height: 240px;
       background: radial-gradient(circle at center, #eef2f5 0%, transparent 100%);
       z-index: 0;
     }
     header img {
-      max-width: 180px;
+      max-width: 220px;
       margin-bottom: 1rem;
       z-index: 1;
       position: relative;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
     }
     header h1 {
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       margin-bottom: 0.5rem;
       font-weight: 700;
       z-index: 1;
       position: relative;
     }
     header p {
-      font-size: 1.4rem;
-      max-width: 720px;
+      font-size: 1.5rem;
+      max-width: 780px;
       margin: 0 auto;
       z-index: 1;
       position: relative;
     }
     .section {
-      max-width: 1100px;
-      margin: 4rem auto;
+      max-width: 1200px;
+      margin: 6rem auto;
       padding: 0 2rem;
+      animation: fadeIn 1.5s ease;
     }
     .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
       font-weight: 600;
+      text-align: center;
     }
     .section p,
     .section ul {
-      font-size: 1.15rem;
-      line-height: 1.7;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-align: center;
     }
     .section img {
       max-width: 100%;
-      border-radius: 12px;
-      margin: 2rem 0;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      margin: 3rem auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      display: block;
     }
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
     }
     .feature-box {
       background: white;
-      padding: 1.5rem;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.07);
-      transition: transform 0.3s ease;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s;
     }
     .feature-box:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.12);
     }
     .cta {
       background: linear-gradient(135deg, #d3ecff, #e9f4ff);
       text-align: center;
-      padding: 5rem 2rem;
-      border-radius: 12px;
-      margin: 5rem auto;
-      max-width: 1000px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 6rem 2rem;
+      border-radius: 16px;
+      margin: 6rem auto;
+      max-width: 1100px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.05);
       animation: fadeInUp 1s ease-in-out;
     }
     .cta h2 {
-      margin-bottom: 1rem;
-      font-size: 2.2rem;
+      font-size: 2.6rem;
+      margin-bottom: 1.5rem;
     }
     .cta p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     .cta a {
       display: inline-block;
       margin-top: 2rem;
-      padding: 1rem 2.5rem;
+      padding: 1rem 3rem;
       background: #0a84ff;
       color: white;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-decoration: none;
-      border-radius: 10px;
-      transition: background 0.3s ease;
+      border-radius: 12px;
+      transition: background 0.3s ease, transform 0.2s;
     }
     .cta a:hover {
       background: #006fd6;
+      transform: scale(1.05);
     }
     footer {
       background-color: #0a84ff;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.95rem;
+      padding: 3rem 1rem;
+      font-size: 1rem;
     }
     .footer-links a {
       color: white;
@@ -141,13 +150,17 @@
       background: #fff;
       color: #333;
       max-width: 800px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 10px;
     }
     @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
+      from {opacity: 0; transform: translateY(40px);}
       to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
   </style>
   <script>
@@ -160,28 +173,28 @@
 <body>
   <header class="animate__animated animate__fadeIn">
     <img src="https://raw.githubusercontent.com/timo-0412/genai-website/main/logo.png" alt="GenAi Logo">
-    <h1>GenAi – Dein AI Voice Agent</h1>
-    <p>Der smarte Sprachassistent für Kosmetikstudios, Dienstleister und moderne Unternehmen. Automatisiert. Persönlich. Effizient.</p>
+    <h1>GenAi – Der AI Voice Agent der Zukunft</h1>
+    <p>Für Kosmetikstudios, Dienstleister & moderne Unternehmen. Professionelle Kundenbetreuung. Automatisiert. Rund um die Uhr.</p>
   </header>
 
-  <section class="section animate__animated animate__fadeInUp">
-    <h2>Was macht GenAi besonders?</h2>
-    <p>GenAi ist nicht nur ein Sprachassistent. Er ist dein digitaler Mitarbeiter am Telefon: beantwortet Fragen, nimmt Termine entgegen und sorgt für professionelle Kommunikation – rund um die Uhr.</p>
+  <section class="section">
+    <h2>Warum GenAi?</h2>
+    <p>Dein digitaler Telefon-Assistent: nimmt Anrufe entgegen, beantwortet Fragen, vergibt Termine – ganz automatisch.</p>
     <div class="features-grid">
-      <div class="feature-box animate__animated animate__fadeInUp">✅ Immer erreichbar – auch nachts & am Wochenende</div>
-      <div class="feature-box animate__animated animate__fadeInUp">✅ Automatische Terminvergabe & Kalenderintegration</div>
-      <div class="feature-box animate__animated animate__fadeInUp">✅ Spart Personalzeit & entlastet dein Team</div>
-      <div class="feature-box animate__animated animate__fadeInUp">✅ Persönliche Stimme – individuell angepasst</div>
+      <div class="feature-box">✅ 24/7 Erreichbarkeit – auch an Feiertagen</div>
+      <div class="feature-box">✅ Integration mit Google Kalender, CRM & mehr</div>
+      <div class="feature-box">✅ Spart Zeit und Personalressourcen</div>
+      <div class="feature-box">✅ Persönliche Begrüßung & natürliche Stimme</div>
     </div>
     <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Telefonassistent KI">
   </section>
 
   <section class="cta">
     <h2>14 Tage kostenlos testen – danach 150 €/Monat</h2>
-    <p>Starte jetzt mit deinem persönlichen AI Voice Agent. Kein Risiko, keine versteckten Kosten – volle Automatisierung deines Kundentelefons.</p>
+    <p>Teste GenAi jetzt – ohne Risiko. Erlebe, wie einfach Telefonservice sein kann.</p>
     <p><strong>Telefon:</strong> <a href="tel:+4917680781803">0176 80781803</a><br>
        <strong>E-Mail:</strong> <a href="mailto:kontakt@genai-voice.de">kontakt@genai-voice.de</a></p>
-    <a href="mailto:kontakt@genai-voice.de">Jetzt 14 Tage testen</a>
+    <a href="mailto:kontakt@genai-voice.de">Jetzt testen</a>
   </section>
 
   <div id="impressum-box">
